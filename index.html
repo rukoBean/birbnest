@@ -390,6 +390,8 @@ Error message and password prompt
 
 <li>Add Table of Contents</li>
 
+<li>Clash-for-Windows文档网站留档</li>
+
 <li>clash如何给订阅的配置文件加上规则或代理</li>
 
 <li>Community Themes</li>
@@ -517,7 +519,7 @@ Error message and password prompt
 {"created":"20250808144900576","title":"$:/state/toc/Table of Contents-TW5-related-1409745771","text":"open","modified":"20250810051515936"},
 {"created":"20250810064206905","title":"$:/state/toc/Table of Contents/TW5-related-Plugin Usage-1409745771","text":"open","modified":"20250810064206905"},
 {"created":"20250810051748708","title":"$:/state/toc/Table of Contents/TW5-related-References-1409745771","text":"open","modified":"20250810051748708"},
-{"created":"20250808175424319","title":"$:/state/toc/uncategorized","text":"open","modified":"20250810051513947"},
+{"created":"20250808175424319","title":"$:/state/toc/uncategorized","text":"close","modified":"20250814033806158"},
 {"created":"20250803004707220","title":"$:/state/tree/$:/core/","text":"hide","modified":"20250810064710778"},
 {"created":"20250808144210526","title":"$:/state/tree/$:/core/macros/","text":"show","modified":"20250808144210526"},
 {"created":"20250803004716265","title":"$:/state/tree/$:/core/ui/","text":"show","modified":"20250808160110131"},
@@ -546,7 +548,7 @@ Error message and password prompt
 {"created":"20250802175614087","title":"$:/state/tree/$:/themes/","text":"hide","modified":"20250808122209800"},
 {"created":"20250802175615003","title":"$:/state/tree/$:/themes/tiddlywiki/","text":"show","modified":"20250802175615003"},
 {"title":"$:/status/RequireReloadDueToPluginChange","text":"no"},
-{"title":"$:/StoryList","created":"20250812100050452","text":"","list":"[[Understand Password]] $:/ControlPanel [[Welcome to The Birb’s Nest]]","modified":"20250812100112386"},
+{"title":"$:/StoryList","created":"20250814033803912","text":"","list":"Clash-for-Windows文档网站留档 clash如何给订阅的配置文件加上规则或代理 [[Welcome to The Birb’s Nest]]","modified":"20250814033803912"},
 {"created":"20250808143406690","title":"$:/tags/SideBar","list":"[[Table of Contents]] $:/core/ui/SideBar/Open $:/core/ui/SideBar/Recent $:/core/ui/MoreSideBar/All $:/core/ui/MoreSideBar/Explorer","text":"","modified":"20250808145508724"},
 {"created":"20250808135843490","text":"","title":"$:/tags/SideBarSegment","list":"$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/plugins/viewmode/custom-sidebar $:/core/ui/SideBarSegments/tabs","modified":"20250808140600611"},
 {"created":"20250808094800758","title":"$:/theme","text":"$:/themes/tiddlywiki/vanilla","modified":"20250808094801778"},
@@ -555,6 +557,7 @@ Error message and password prompt
 {"created":"20250808112354158","title":"$:/themes/tiddlywiki/vanilla/options/stickytitles","text":"no","modified":"20250808112402319"},
 {"created":"20250802163537558","title":"$:/view","text":"classic","modified":"20250802163544181"},
 {"created":"20250810052002910","text":"* https://tiddlywiki.com/#Adding%20a%20table%20of%20contents%20to%20the%20sidebar","tags":"References","title":"Add Table of Contents","modified":"20250810052056995"},
+{"created":"20250814033807718","text":"https://cfw-docs-archive.netlify.app/","tags":"","title":"Clash-for-Windows文档网站留档","modified":"20250814033843636","type":"text/markdown"},
 {"created":"20250808074721194","text":"打开Settings，找到其中有关Profile的设置“Parsers”，点击右侧“edit“进行编辑。编辑结束后更新一下Profile里对应的那一个订阅。\n下面是我给校园网做的设置：\n\n```yaml\nparsers: # 这一行不去动它\n- url: https://sub.example.com/subscribe?token=xxxx ##写机场订阅用来下载配置文件的url\n  yaml:\n    append-proxies: # proxies最后面增加以下代理\n      - name: 'school' # 这是用来接入docker-easyconnect的\n        type: socks5\n        server: 127.0.0.1\n        port: 1080\n    append-proxy-groups: # proxies最后面增加以下组\n      - name: LocalProxy\n        type: fallback #这个类型是故障时切换下一个代理，当我开了docker-easyconnect它走第一个代理，没开始走第二个（直连）\n        proxies:\n          - 'school'\n          - DIRECT\n        url: 'http://www.gstatic.com/generate_204'\n        interval: 300 # 每300秒检查一下用哪一个代理\n    prepend-rules: # 在订阅的配置文件的rules的最前面增加以下规则\n        - DOMAIN,vpn.school.edu.cn,DIRECT \n        - DOMAIN,auth.school.edu.cn,DIRECT #这两个是校园网vpn登录地址，需要直连\n        - DOMAIN-SUFFIX,seu.edu.cn,LocalProxy #学校其他的网址全都走docker-easyconnect\n        - PROCESS-NAME,MobaXterm.exe,DIRECT\n        - PROCESS-NAME,XWin_MobaX.exe,DIRECT #这是我用MobaXterm对应的两个进程，因为已经设置了Tunnel和跳板机所以不需要代理，直连即可\n```\n\nPS：这样设置好了之后，firefox的Settings的General最下方的Network Settings里面，proxy选择“Use System Proxy Settings”即可。","tags":"","title":"clash如何给订阅的配置文件加上规则或代理","modified":"20250808121758751"},
 {"created":"20250810052204419","text":"* http://j.d.whitespace.tiddlyspot.com/\n* http://j.d.mono.tiddlyspot.com/\n* https://ibnishak.github.io/Timimi/\n* https://ibnishak.github.io/ghostwriter/\n* https://saqimtiaz.github.io/sq-tw/notebook.html\n* http://tesseractmoments.surge.sh/","tags":"References","title":"Community Themes","modified":"20250810074909746"},
 {"created":"20250810064117508","text":"\u003Cdetails>\n\t\u003Csummary>This sums it up\u003C/summary> \n\tAll the details follow here.\n\u003C/details>\n\n\u003Cdetails class=\"red\">\n\t\u003Csummary>This sums it up\u003C/summary> \n\tAll the details follow here.\n\u003C/details>\n\n\u003Cdetails class=\"yellow\">\n\t\u003Csummary>This sums it up\u003C/summary> \n\tAll the details follow here.\n\u003C/details>\n\n\u003Cdetails class=\"green\">\n\t\u003Csummary>This sums it up\u003C/summary> \n\tAll the details follow here.\n\u003C/details>","tags":"[[Plugin Usage]]","title":"Details and Summary","modified":"20250810064204127"},
